@@ -1,0 +1,47 @@
+pipeline {
+    agent any
+     stages {
+        stage('Checkout') {
+            steps {
+                
+                git branch: 'main', credentialsId: 'githubcredential', url: 'https://github.com/Haseen-Fairuz/BookApp.git'
+
+                
+            }
+        }
+        stage('build') {
+            steps {
+                script{
+                sh "whoami"
+                sh "docker build -t haseenfairuz/jenkinsbookapp:v1 ."
+                }
+                
+            }
+        }
+        stage('push to dockerhub') {
+            steps {
+                script{
+                withCredentials([usernamePassword(credentialsId: 'dockercredential', usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]) {
+                sh "echo \${DOCKER_PASSWORD} | docker login --username \${DOCKER_USERNAME} --password-stdin"
+                sh "docker push haseenfairuz/jenkinsbookapp:v1"
+                }
+                }
+            }
+        }
+       stage('Upload') {
+                steps {
+                    nexusArtifactUploader artifacts: [[artifactId: 'spring-boot-starter-parent', classifier: '', file: 'target/BookStoreManager-0.0.1-SNAPSHOT.jar', type: 'jar']], credentialsId: 'nexuscredential', groupId: 'com.BookStore', nexusUrl: '64.227.180.187:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'bookapp-repo', version: '0.0.1-SNAPSHOT'
+               
+            }
+        }
+        stage('Deploy') {
+            steps {
+                script{
+                
+                sh "docker run -p 8885:8885 -d haseenfairuz/jenkinsbookapp:v1"
+                }
+                
+            }
+        }
+   }
+}
