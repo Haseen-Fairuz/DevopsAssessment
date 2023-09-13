@@ -33,6 +33,10 @@
 
    Created a Deployment and service configuration to deploy the containerized instance of web application (yaml file in kubernetes folder).
 
+   <img src="https://github.com/Haseen-Fairuz/DevopsAssessment/blob/main/Screenshots/Screenshot%20from%202023-09-13%2022-02-49.png" width="600" height="200">
+
+   <img src="https://github.com/Haseen-Fairuz/DevopsAssessment/blob/main/Screenshots/Screenshot%20from%202023-09-13%2022-03-45.png" width="600" height="400">
+   
    <img src="https://github.com/Haseen-Fairuz/DevopsAssessment/blob/main/Screenshots/Screenshot%20from%202023-09-13%2013-43-39.png" width="800" height="600">
    
    <img src="https://github.com/Haseen-Fairuz/DevopsAssessment/blob/main/Screenshots/Screenshot%20from%202023-09-13%2013-43-54.png" width="800" height="600">
