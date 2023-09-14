@@ -45,15 +45,17 @@
 
    <img src="https://github.com/Haseen-Fairuz/DevopsAssessment/blob/main/Screenshots/Screenshot%20from%202023-09-13%2022-03-45.png" width="600" height="400">
    
-   <img src="https://github.com/Haseen-Fairuz/DevopsAssessment/blob/main/Screenshots/Screenshot%20from%202023-09-13%2013-43-39.png" width="800" height="600">
-   
-   <img src="https://github.com/Haseen-Fairuz/DevopsAssessment/blob/main/Screenshots/Screenshot%20from%202023-09-13%2013-43-54.png" width="800" height="600">
-
 - **AWS Configuration:**
 
     Created Target Group to to route traffic to the worker nodes.
 
     Attached the target group to an AWS Application load balancer (ALB) to manage the traffic and created appropriate target group.
+
+    http://demo-alb-1847155200.ap-south-1.elb.amazonaws.com/
+
+    <img src="https://github.com/Haseen-Fairuz/DevopsAssessment/blob/main/Screenshots/Screenshot%20from%202023-09-13%2013-43-39.png" width="800" height="600">
+   
+    <img src="https://github.com/Haseen-Fairuz/DevopsAssessment/blob/main/Screenshots/Screenshot%20from%202023-09-13%2013-43-54.png" width="800" height="600">
 
     <img src="https://github.com/Haseen-Fairuz/DevopsAssessment/blob/main/Screenshots/load%20balancer.jpeg" width="800" height="600">
 
