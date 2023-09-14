@@ -3,7 +3,13 @@
 
 - **Database Setup:**
 
-   Mysql database was installed in an ec2 instance. The database contains table "book" with fields book,author,price. 
+   Mysql database was installed in an ec2 instance.
+
+   Security Groups for the database was configured.
+
+   For the application "bookdb" database was created.
+
+   The database contains table "book" with fields book,author,price. 
 
 - **Database Backup:**
 
@@ -29,9 +35,11 @@
 
 - **Kubernetes:**
     
-   Set up Kubernetes cluster with a master node and two worker nodes and provided necessery security groups.
+   Set up Kubernetes cluster using kubeadm with a master node and two worker nodes and provided necessery security groups.
 
    Created a Deployment and service configuration to deploy the containerized instance of web application (yaml file in kubernetes folder).
+
+   Using kubectl commands made sure that all pods are running.
 
    <img src="https://github.com/Haseen-Fairuz/DevopsAssessment/blob/main/Screenshots/Screenshot%20from%202023-09-13%2022-02-49.png" width="600" height="200">
 
@@ -45,7 +53,7 @@
 
     Created Target Group to to route traffic to the worker nodes.
 
-    Attached the target group to an AWS load balancer to manage the traffic and created appropriate target group.
+    Attached the target group to an AWS Application load balancer (ALB) to manage the traffic and created appropriate target group.
 
     <img src="https://github.com/Haseen-Fairuz/DevopsAssessment/blob/main/Screenshots/load%20balancer.jpeg" width="800" height="600">
 
