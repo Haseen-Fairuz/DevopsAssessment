@@ -35,7 +35,7 @@
 
 - **Kubernetes:**
     
-   Set up Kubernetes cluster using kubeadm with a master node and two worker nodes and provided necessery security groups.
+   Set up Kubernetes cluster using kubeadm , EKS with two worker nodes and provided necessery security groups.
 
    Created a Deployment and service configuration to deploy the containerized instance of web application (yaml file in kubernetes folder).
 
