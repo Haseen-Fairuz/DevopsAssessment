@@ -44,6 +44,8 @@
    <img src="https://github.com/Haseen-Fairuz/DevopsAssessment/blob/main/Screenshots/Screenshot%20from%202023-09-13%2022-02-49.png" width="600" height="200">
 
    <img src="https://github.com/Haseen-Fairuz/DevopsAssessment/blob/main/Screenshots/Screenshot%20from%202023-09-13%2022-03-45.png" width="600" height="400">
+
+   <img src="https://github.com/Haseen-Fairuz/DevopsAssessment/blob/main/Screenshots/Screenshot%20from%202023-09-15%2014-46-02.png" width="600" height="400">
    
 - **AWS Configuration:**
 
