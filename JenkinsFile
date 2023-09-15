@@ -9,7 +9,9 @@ pipeline {
             steps {
                 
                 git branch: 'main', credentialsId: 'githubcredential', url: 'https://github.com/Haseen-Fairuz/BookApp.git'
-         }
+
+                
+            }
         }
         stage('Maven Build') {
             
@@ -21,7 +23,7 @@ pipeline {
             steps {
                 script{
                 sh "whoami"
-                sh "docker build -t haseenfairuz/jenkinsbookapp:v1 ."
+                sh "docker build -t haseenfairuz/boockapp2:v1 ."
                 }
                 
             }
@@ -31,7 +33,7 @@ pipeline {
                 script{
                 withCredentials([usernamePassword(credentialsId: 'dockercredential', usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]) {
                 sh "echo \${DOCKER_PASSWORD} | docker login --username \${DOCKER_USERNAME} --password-stdin"
-                sh "docker push haseenfairuz/jenkinsbookapp:v1"
+                sh "docker push haseenfairuz/boockapp2:v1"
                 }
                 }
             }
@@ -42,14 +44,17 @@ pipeline {
                
             }
         }
-        stage('Deploy') {
+        stage('Apply Kubernetes') {
             steps {
-                script{
-                
-                sh "docker run -p 8885:8885 -d haseenfairuz/jenkinsbookapp:v1"
+                withKubeConfig([credentialsId: 'kubernetescredential', serverUrl: 'https://EC478DC8B11A15402980972C722036EF.gr7.ap-south-1.eks.amazonaws.com']) {
+                    sh 'kubectl apply -f deployment.yaml'
+                    sh 'kubectl apply -f service.yaml'
                 }
-                
             }
         }
-   }
+            
+    }
+         
+        
 }
+ 
