@@ -9,7 +9,9 @@
 
    For the application "bookdb" database was created.
 
-   The database contains table "book" with fields book,author,price. 
+   The database contains table "book" with fields book,author,price.
+
+   A new user was created and details like the database url, username and password were given in the application.properties file in the web application inorder to      provide connection to the database. 
 
 - **Database Backup:**
 
