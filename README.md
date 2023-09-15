@@ -23,11 +23,9 @@
 
    <img src="https://github.com/Haseen-Fairuz/DevopsAssessment/blob/main/Screenshots/Screenshot%20from%202023-09-13%2020-16-50.png" width="500" height="300">
 
-- **Maven:**
-
-  Maven was used to package the application into a jar file.
-
 - **Docker Build:**
+
+   The application was packaged into a jar file using maven.
   
    Build a Docker image of the application using Dockerfile(in BookStoreTrials folder).
 
@@ -42,6 +40,8 @@
    Created a Deployment and service configuration to deploy the containerized instance of web application (yaml file in kubernetes folder).
 
    Using kubectl commands made sure that all pods are running.
+
+   The application got deployed properly and was running on the required port.
 
    <img src="https://github.com/Haseen-Fairuz/DevopsAssessment/blob/main/Screenshots/Screenshot%20from%202023-09-13%2022-02-49.png" width="600" height="200">
 
@@ -74,6 +74,8 @@
     **Stage 3: Docker build and push:** Build docker image and push the image to Docker hub.
 
     **Stage 4: Upload to Nexus:** Upload the application to nexus repository manager.
+
+    <img src="https://github.com/Haseen-Fairuz/DevopsAssessment/blob/main/Screenshots/Screenshot%20from%202023-09-15%2015-11-41.png" width="600" height="300">
 
     **Stage 5: Deploy to Kubernetes:** The application is then deployed into kubernetes.
 
