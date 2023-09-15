@@ -75,4 +75,4 @@
 
     **Stage 5: Deploy to Kubernetes:** The application is then deployed into kubernetes.
 
-   <img src="https://github.com/Haseen-Fairuz/DevopsAssessment/blob/main/Screenshots/Screenshot%20from%202023-09-13%2021-29-51.png" width="600" height="300">
+   <img src="https://github.com/Haseen-Fairuz/DevopsAssessment/blob/main/Screenshots/Screenshot%20from%202023-09-15%2014-48-34.png" width="600" height="300">
